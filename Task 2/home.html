@@ -1,76 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CodeVista</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <style>
-    /* Loader animation style */
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background-color: white;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-      font-weight: bold;
-      opacity: 1;
-      transition: opacity 0.8s ease;
-    }
-
-    #loader h1 {
-      animation: scaleIn 1.5s ease-in-out infinite alternate;
-      color: #1976d2;
-    }
-
-    @keyframes scaleIn {
-      from {
-        transform: scale(1);
-        opacity: 0.8;
-      }
-      to {
-        transform: scale(1.1);
-        opacity: 1;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">\
+  
   <script>
-    // Show loader only once per session (page reload or direct visit)
     window.addEventListener('load', () => {
       const loader = document.getElementById('loader');
       const alreadyVisited = sessionStorage.getItem('visitedHome');
-
       if (!alreadyVisited) {
-        // First time: show loader
         sessionStorage.setItem('visitedHome', 'true');
         setTimeout(() => {
           loader.style.opacity = '0';
           setTimeout(() => loader.style.display = 'none', 800);
         }, 2500);
       } else {
-        // Already visited in this tab: hide loader instantly
         loader.style.display = 'none';
       }
     });
   </script>
 </head>
 <body>
-
-  <!-- Loader -->
   <div id="loader">
     <h1>Code Vista-Empowering Future Coders</h1>
   </div>
-
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo"><i class="fas fa-lightbulb"></i> CodeVista</div>
     <ul>
@@ -81,8 +38,6 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- Main Content -->
   <main>
     <div class="centered"> 
       <h2>Welcome to CodeVista</h2>
@@ -90,7 +45,6 @@
         <i class="fas fa-brain" style="color:#ffb6c1; font-size: 1.5em;"></i> →
         <i class="fas fa-lightbulb" style="color:#ffeb3b; opacity: 0.8; font-size: 1.5em;"></i>
       </div>
-
       <p style="font-size:20px; font-weight:bold">Explore, Learn, Build, Succeed</p>
       <p>Step into the world of tech with CodeVista – your platform to learn, practice, and master computer science.</p>
       <hr>
