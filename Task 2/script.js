@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem('selectedCourse');
   }
 
-  // Load dashboard data
   const dashboardTable = document.getElementById("dashboardTable");
   if (dashboardTable) {
     const registrations = JSON.parse(localStorage.getItem("registrations") || "[]");
@@ -130,28 +129,24 @@ function registerCourse(e) {
   let registrations = JSON.parse(localStorage.getItem("registrations") || "[]");
 
   if (editRow) {
-    // update table row
     editRow.cells[0].innerText = name;
     editRow.cells[1].innerText = dob;
     editRow.cells[2].innerText = email;
     editRow.cells[3].innerText = phone;
     editRow.cells[4].innerText = course;
     editRow.cells[5].innerText = duration;
-
-    // update localStorage
+	
     const index = Array.from(editRow.parentElement.rows).indexOf(editRow) - 1; // subtract header
     registrations[index] = newEntry;
     localStorage.setItem("registrations", JSON.stringify(registrations));
     editRow = null;
   } else {
-    // check for duplicates
     const isDuplicate = registrations.some(r => r.name === name && r.course === course);
     if (isDuplicate) {
       errorBox.innerText = "Already registered for this course.";
       return;
     }
-
-    // add to table
+	
     const table = document.getElementById("dashboardTable");
     if (table) {
       const row = table.insertRow();
@@ -170,8 +165,7 @@ function registerCourse(e) {
   }
 
   closeRegisterForm();
-
-  // Redirect from enroll.html to dashboard.html
+  
   if (window.location.pathname.includes('enroll.html')) {
     window.location.href = 'dashboard.html';
   }
@@ -207,7 +201,3 @@ function deleteEntry(btn) {
   registrations = registrations.filter(entry => !(entry.name === name && entry.course === course));
   localStorage.setItem("registrations", JSON.stringify(registrations));
 }
-
-
-
-
