@@ -1,4 +1,3 @@
-// Translations
 const translations = {
   en: {
     heading: "Unlimited movies, TV shows and more",
@@ -108,21 +107,14 @@ function showMovieModal(movie) {
   const modal = document.getElementById("movie-modal");
   const videoContainer = document.getElementById("video-container");
   const modalContent = document.querySelector(".modal-content");
-
-  // Show modal
+  
   modal.style.display = "flex";
-
-  // Set default modal size
   modalContent.style.width = "800px";
   modalContent.style.height = "auto";
-
-  // Set movie details
   document.getElementById("modal-image").src = movie.thumbnail;
   document.getElementById("modal-title").textContent = movie.title;
   document.getElementById("modal-tags").textContent = `${movie.releaseYear} | ${movie.ageRating} | ${movie.tags.join(", ")}`;
   document.getElementById("modal-description").textContent = movie.description;
-
-  // Reset display
   document.getElementById("modal-image").style.display = "block";
   document.getElementById("modal-title").style.display = "block";
   document.getElementById("modal-tags").style.display = "block";
@@ -130,7 +122,6 @@ function showMovieModal(movie) {
   document.getElementById("watch-btn").style.display = "inline-block";
   videoContainer.innerHTML = "";
 
-  // Watch button
   document.getElementById("watch-btn").onclick = () => {
     let embedURL = "";
 
@@ -143,15 +134,12 @@ function showMovieModal(movie) {
       alert("Invalid YouTube link");
       return;
     }
-
-    // Hide other content
     document.getElementById("modal-image").style.display = "none";
     document.getElementById("modal-title").style.display = "none";
     document.getElementById("modal-tags").style.display = "none";
     document.getElementById("modal-description").style.display = "none";
     document.getElementById("watch-btn").style.display = "none";
 
-    // Show video (same size modal)
     videoContainer.innerHTML = `
       <iframe 
         src="${embedURL}?autoplay=1&rel=0" 
@@ -162,11 +150,9 @@ function showMovieModal(movie) {
     `;
   };
 
-  // Close modal
   document.getElementById("modal-close").onclick = () => {
     modal.style.display = "none";
     videoContainer.innerHTML = "";
-
     document.getElementById("modal-image").style.display = "block";
     document.getElementById("modal-title").style.display = "block";
     document.getElementById("modal-tags").style.display = "block";
@@ -181,7 +167,6 @@ function showMovieModal(movie) {
     }
   };
 }
-
 
 function scrollTrending(direction) {
   const container = document.getElementById("trending-container");
