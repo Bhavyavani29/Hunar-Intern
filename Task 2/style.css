@@ -1,14 +1,13 @@
-/* Body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f4f4f4;
 }
+
 .centered{
 	text-align:center;
 }
 
-/* Navbar */
 .navbar {
   background-color: #b3dbff;
   color: black;
@@ -38,7 +37,6 @@ body {
   font-weight: 500;
 }
 
-/* Home Section */
 #home {
   background: linear-gradient(to right, #fff5f3, #fdfdf5);
   background-size: 400% 400%;
@@ -53,7 +51,6 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* Sections */
 section {
   padding: 30px;
   background-color: white;
@@ -65,7 +62,6 @@ section.active {
   display: block;
 }
 
-/* Buttons */
 button, .home-nav-btn {
   padding: 10px 16px;
   background-color: #1976d2;
@@ -82,7 +78,6 @@ button:hover, .home-nav-btn:hover {
   transform: scale(1.03);
 }
 
-/* Course Cards */
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -102,7 +97,6 @@ button:hover, .home-nav-btn:hover {
   margin-top: 10px;
 }
 
-/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -115,7 +109,6 @@ table th, table td {
   text-align: center;
 }
 
-/* Dashboard Buttons */
 .edit-btn {
   background-color: #ffb300;
   color: #000;
@@ -134,7 +127,6 @@ table th, table td {
   cursor: pointer;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -176,7 +168,6 @@ table th, table td {
   cursor: pointer;
 }
 
-/* Benefits */
 .benefits {
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +186,6 @@ table th, table td {
   color: #212121;
 }
 
-/* Growth steps */
 .growth-steps {
   font-size: 30px;
   text-align: center;
@@ -207,7 +197,6 @@ table th, table td {
   margin: 0 10px;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -230,7 +219,6 @@ table th, table td {
 .social-icons a:nth-child(3):hover { color: #25D366; }
 .social-icons a:nth-child(4):hover { color: #1877F2; }
 
-/* Contact */
 #contact {
   background-color: #f9fafb;
   padding: 30px;
@@ -259,7 +247,6 @@ table th, table td {
   color: #1e40af;
 }
 
-/* Registration Form */
 #registrationForm {
   display: flex;
   flex-direction: column;
@@ -321,7 +308,6 @@ table th, table td {
   font-size: 14px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -386,4 +372,35 @@ table th, table td {
 }
 
 
+#loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: white;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: bold;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
 
+    #loader h1 {
+      animation: scaleIn 1.5s ease-in-out infinite alternate;
+      color: #1976d2;
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      to {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
