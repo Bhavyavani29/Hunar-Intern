@@ -4,67 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Netflix India Clone</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@700&display=swap" rel="stylesheet"/>
-
-  <style>
- /* ✅ N Intro Animation */
-#intro-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: fadeOut 2s ease 2.8s forwards;
-}
-
-#netflix-logo {
-  width: 600px;
-  animation: zoomFade 2.5s ease forwards;
-}
-
-@keyframes zoomFade {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-</style>
-
 </head>
 <body>
-
-<!-- ✅ N INTRO ANIMATION -->
 <div id="intro-animation">
   <img src="images/netflix.webp" alt="Netflix Intro" id="netflix-logo" />
 </div>
 
-
-<!-- ✅ HEADER -->
 <div class="header">
   <nav class="navbar">
     <div class="text-logo">Netflix</div>
@@ -88,7 +36,6 @@
   </div>
 </div>
 
-<!-- ✅ TRENDING -->
 <section class="trending" id="trending">
   <h2 id="trending-title">Trending Now</h2>
   <div class="carousel-wrapper">
@@ -104,7 +51,6 @@
   </div>
 </section>
 
-<!-- ✅ REASONS TO JOIN -->
 <section class="reasons">
   <h2 class="reasons-title">More reasons to join</h2>
   <div class="reasons-wrapper">
@@ -139,7 +85,6 @@
   </div>
 </section>
 
-<!-- ✅ FAQ -->
 <section class="faq">
 <h2 id="faq-title">Frequently Asked Questions</h2>
 <div class="faq-item">
@@ -164,8 +109,6 @@
 </div>
 </section>
 
-
-<!-- ✅ FOOTER -->
 <footer class="footer">
 <p>Questions? Call <a href="#">000-800-919-1694</a></p>
 <div class="footer-links">
@@ -200,12 +143,8 @@
 </select>
 </div>
 <p class="footer-note">Netflix India</p>
-<!-- ✅ Your footer ends like this -->
-  <!-- footer content -->
 </footer>
 
-
-<!-- ✅ MODAL -->
 <div class="modal" id="movie-modal">
   <div class="modal-content">
     <span class="close-btn" id="modal-close">&times;</span>
@@ -218,11 +157,7 @@
   </div>
 </div>
 
-<!-- ✅ SCRIPT -->
 <script src="script.js"></script>
-
-<!-- ✅ N Intro Display Logic -->
-
 
 <script>
  window.addEventListener("DOMContentLoaded", () => {
@@ -235,11 +170,10 @@
     sessionStorage.setItem("introPlayed", "true");
     setTimeout(() => {
       intro.style.display = "none";
-    }, 5000); // matches total animation time
+    }, 5000);
   }
 });
 
 </script>
-
 </body>
 </html>
