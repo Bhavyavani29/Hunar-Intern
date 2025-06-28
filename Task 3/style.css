@@ -1,0 +1,456 @@
+/* Netflix Clone Style */
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.3)), url('Nbg.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  padding: 50px 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.text-logo {
+  font-family: 'Netflix Sans', 'Helvetica Neue', sans-serif;
+  color: #e50914;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#languageSelect, #languageSelectFooter {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.sign-in {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  padding: 10px 10px;
+  margin-top: 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.email-form input {
+  padding: 12px;
+  width: 300px;
+  max-width: 90%;
+  border: none;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.email-form button {
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Trending */
+.trending {
+  padding: 100px 100px;
+  background-color: #111;
+}
+
+.trending h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 4px;
+  overflow: visible;
+  width: 180px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-left: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 2/3;
+  background-color: #000;
+}
+
+.card span {
+  position: absolute;
+  bottom: 10px;
+  left: -20px;
+  font-size: 80px;
+  font-weight: 900;
+  color: black;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 2px white;
+  z-index: 5;
+}
+
+.card p {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content .tags {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.modal-content .cast {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.modal-content .watch-btn {
+  background-color: #e50914;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
+  color: white;
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #000;
+  padding: 80px 100px;
+}
+
+.faq h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #303030;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 16px;
+  color: #ccc;
+  background: #222;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 300px;
+  padding: 40px;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #999;
+  padding: 40px 60px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+  flex: 1 1 200px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-lang {
+  margin: 20px 0;
+}
+
+.footer-note {
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.reasons {
+  padding: 60px 40px;
+  background-color: #000;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reasons-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.reasons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.reason-card {
+  background: linear-gradient(to top right, #1b1b3a, #2d0b42);
+  border-radius: 14px;
+  padding: 24px 20px 60px;
+  position: relative;
+  transition: transform 0.3s ease;
+  min-height: 200px;
+}
+
+.reason-card:hover {
+  transform: translateY(-10px);
+}
+
+.reason-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.image-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.image-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 800px;
+  max-width: 90vw;
+  background: #000;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
+  text-align: left;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.player-container iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.watch-btn {
+  display: inline-block;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  float: right;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}

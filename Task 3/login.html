@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Netflix Sign In</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@700&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body, html {
+height: 100%;
+font-family: 'Arial', sans-serif;
+background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('Nbg.jpeg') center/cover no-repeat fixed;
+color: #fff;
+}
+.login-container {
+background-color: rgba(0, 0, 0, 0.75);
+width: 360px;
+padding: 60px 68px 40px;
+margin: 80px auto;
+border-radius: 4px;
+}
+.login-logo {
+font-size: 32px;
+color: #e50914;
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+}
+h2 {
+font-size: 28px;
+margin-bottom: 20px;
+text-align: center;
+}
+input[type="email"],
+input[type="password"] {
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+background-color: #333;
+border: none;
+border-radius: 4px;
+color: #fff;
+}
+.sign-in-btn {
+width: 100%;
+padding: 12px;
+margin: 20px 0;
+background-color: #e50914;
+color: #fff;
+font-weight: bold;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+.separator {
+text-align: center;
+color: #aaa;
+margin: 20px 0 10px;
+}
+.code-btn {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 4px;
+font-weight: bold;
+cursor: pointer;
+}
+.extra-options {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 10px 0;
+font-size: 14px;
+}
+.captcha-note {
+color: #b3b3b3;
+font-size: 13px;
+margin-top: 20px;
+}
+.signup-text {
+margin-top: 20px;
+font-size: 14px;
+text-align: center;
+}
+.signup-text a,
+.forgot-link {
+color: #fff;
+text-decoration: none;
+}
+.forgot-link {
+display: block;
+margin-top: 10px;
+font-size: 14px;
+text-align: center;
+}
+
+@media (max-width: 420px) {
+.login-container {
+width: 90%;
+padding: 40px 20px;
+}
+}
+</style>
+</head>
+<body>
+<div class="login-container">
+<div class="login-logo">Netflix</div>
+<h2>Sign In</h2>
+<form id="loginForm">
+<input type="email" placeholder="Email or mobile number" required />
+<input type="password" placeholder="Password" required />
+<button class="sign-in-btn" type="submit">Sign In</button>
+
+<div class="separator">OR</div>
+<button class="code-btn" type="button">Use a sign-in code</button>
+
+<a href="#" class="forgot-link">Forgot password?</a>
+
+<div class="extra-options">
+<label>
+<input type="checkbox" /> Remember me
+</label>
+</div>
+
+<div class="signup-text">
+New to Netflix? <a href="#">Sign up now.</a>
+</div>
+
+<p class="captcha-note">
+This page is protected by Google reCAPTCHA to ensure you’re not a bot.
+<a href="#">Learn more.</a>
+</p>
+</form>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+e.preventDefault();
+window.location.href = "index.html#trending"; // Redirect after login
+});
+</script>
+</body>
+</html>

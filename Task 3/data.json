@@ -1,0 +1,95 @@
+{
+"trendingMovies": [
+{
+  "title": "The Great Indian Kapil Show",
+  "releaseYear": "2025",
+  "ageRating": "U/A 13+",
+  "tags": ["Comedy", "Talk Show"],
+  "description": "Kapil Sharma hosts a laugh-out-loud variety talk show featuring Bollywood celebrities and hilarious sketches.",
+  "thumbnail": "images/kapil.jpg",
+  "youtubeLink": "https://www.youtube.com/watch?v=kWwWrqSBds0"
+},
+
+{
+"title": "Jaat",
+"releaseYear": "2025",
+"ageRating": "U/A 16+",
+"tags": ["Action", "Drama"],
+"description": "A gripping action-drama featuring a powerful performance by Sunny Deol.",
+"thumbnail": "images/jaat.jpg",
+"youtubeLink": "https://youtu.be/-I5kX9b9rGc?si=ULm4rHHxv8QIMNm6"
+},
+{
+"title": "HIT: The Third Case",
+"releaseYear": "2025",
+"ageRating": "U/A 16+",
+"tags": ["Crime", "Thriller"],
+"description": "The third installment in the HIT franchise, following a challenging case.",
+"thumbnail": "images/hit3.jpg",
+"youtubeLink": "https://youtu.be/VOScrKrY2fM?si=6f8KiOzxmPhljfpw"
+},
+{
+"title": "Squid Game",
+"releaseYear": "2025",
+"ageRating": "U/A 13+",
+"tags": ["Fantasy", "Horror"],
+"description": "Gi‑hun seeks to end the deadly game; Front Man sets new stakes.",
+"thumbnail": "images/squid.webp",
+"youtubeLink": "https://youtu.be/9AWsHxSfU_Y?si=Qe7V1fZASDY-Vi13"
+},
+{
+"title": "Rana Naidu",
+"releaseYear": "2025",
+"ageRating": "U/A 16+",
+"tags": ["Crime Drama", "Thriller"],
+"description": "A fixer for the elite faces his greatest challenge when his father is released from prison.",
+"thumbnail": "images/rana_naidu.jpg",
+"youtubeLink": "https://youtu.be/7OO5uGvNZpM?si=UyTUKNVqwL3Xxw_m"
+},
+{
+"title": "The Royals",
+"releaseYear": "2025",
+"ageRating": "U/A 13+",
+"tags": ["Romantic", "Comedy", "Drama"],
+"description": "Royal heir teams with a CEO to convert palace into a luxury resort while facing family drama.",
+"thumbnail": "images/royals.webp",
+"youtubeLink": "https://youtu.be/YV7FN78Dwxo?si=tzr6zyKB0ATQW7Mf"
+},
+{
+"title": "Chhaava",
+"releaseYear": "2025",
+"ageRating": "TV‑MA",
+"tags": ["Historical", "Action", "Drama"],
+"description": "Story of Sambhaji Maharaj and his fearless resistance against Mughal dominance.",
+"thumbnail": "images/chhaava.jpg",
+"youtubeLink": "https://youtu.be/hs3w32RG8L8?si=0vsRSlbwC50kQvta"
+},
+{
+"title": "Retro",
+"releaseYear": "2025",
+"ageRating": "U/A 13+",
+"tags": ["Thriller", "Drama"],
+"description": "A reformed gangster is pulled back into violence by his dark past.",
+"thumbnail": "images/retro.jpg",
+"youtubeLink": "https://youtu.be/XKOzmyMN_bc?si=TrU4WKUQLKG3hmgc"
+},
+{
+"title": "Sikandar",
+"releaseYear": "2025",
+"ageRating": "U/A 16+",
+"tags": ["Crime", "Drama"],
+"description": "A gritty tale of ambition, betrayal and underworld dominance.",
+"thumbnail": "images/sikandar.jpg",
+"youtubeLink": "https://youtu.be/in6mSwNbXS0?si=8jKwGKNeJsbLWjPo"
+},
+{
+"title": "Pushpa 2: The Rule",
+"releaseYear": "2025",
+"ageRating": "U/A 16+",
+"tags": ["Action", "Crime"],
+"description": "Sequel featuring iconic swag and unmatched action choreography.",
+"thumbnail": "images/pushpa2.jpg",
+"youtubeLink": "https://youtu.be/MSNL6OIr9kU?si=-OaWizdNJUw3VX4v"
+}
+]
+}
