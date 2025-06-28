@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll Now - CodeVista</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-lightbulb"></i> CodeVista</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courses.html">Explore Courses</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enroll.html">Enroll Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Enrollment Form -->
+  <section class="active">
+    <div class="modal-content form-style" style="max-width: 600px; margin: auto;">
+      <h3 style="text-align:center;">Register for a Course</h3>
+      <form id="registrationForm" onsubmit="registerCourse(event)">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="dob">Birth Date</label>
+        <input type="date" id="dob" required />
+
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" required pattern="[0-9]{10}" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+
+        <div id="chooseCourseGroup">
+          <label for="chooseCourse">Course:</label>
+          <select id="chooseCourse" required>
+            <option value="">-- Select Course --</option>
+            <!-- Course options will be populated via script.js -->
+          </select>
+        </div>
+
+        <label for="duration">Duration :</label>
+        <select id="duration" required>
+          <option value="">-- Choose duration --</option>
+          <option value="1 Month">1 Month</option>
+          <option value="2 Months">2 Months</option>
+          <option value="3 Months">3 Months</option>
+        </select>
+
+        <div id="formError" class="error-message"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CodeVista</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-lightbulb"></i> CodeVista</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courses.html">Explore Courses</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enroll.html">Enroll Now</a></li>
+    </ul>
+  </nav>
+
+  <section id="dashboard" class="active">
+    <h2>Your Dashboard</h2>
+    <table id="dashboardTable">
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Course</th>
+        <th>Duration</th>
+        <th>Learning Path</th>
+        <th>Actions</th>
+      </tr>
+      <!-- Rows will be inserted by script.js -->
+    </table>
+  </section>
+
+  <!-- Modal to show learning path -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-text"></div>
+    </div>
+  </div>
+
+  <!-- Register Form Modal (for Edit) -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content form-style">
+      <span class="close" onclick="closeRegisterForm()">&times;</span>
+      <h3>Edit Registration</h3>
+      <form id="registrationForm" onsubmit="registerCourse(event)">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="dob">Birth Date</label>
+        <input type="date" id="dob" required />
+
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" required pattern="[0-9]{10}" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+
+        <div id="chooseCourseGroup" style="display: none;">
+          <label for="chooseCourse">Course:</label>
+          <select id="chooseCourse">
+            <option value="">-- Select Course --</option>
+          </select>
+        </div>
+
+        <label for="duration">Duration :</label>
+        <select id="duration" required>
+          <option value="">-- Choose duration --</option>
+          <option value="1 Month">1 Month</option>
+          <option value="2 Months">2 Months</option>
+          <option value="3 Months">3 Months</option>
+        </select>
+
+        <div id="formError" class="error-message"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

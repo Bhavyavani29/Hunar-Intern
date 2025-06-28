@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeVista</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* Loader animation style */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: white;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: bold;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
+
+    #loader h1 {
+      animation: scaleIn 1.5s ease-in-out infinite alternate;
+      color: #1976d2;
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      to {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <script>
+    // Show loader only once per session (page reload or direct visit)
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const alreadyVisited = sessionStorage.getItem('visitedHome');
+
+      if (!alreadyVisited) {
+        // First time: show loader
+        sessionStorage.setItem('visitedHome', 'true');
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          setTimeout(() => loader.style.display = 'none', 800);
+        }, 2500);
+      } else {
+        // Already visited in this tab: hide loader instantly
+        loader.style.display = 'none';
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <h1>Code Vista-Empowering Future Coders</h1>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-lightbulb"></i> CodeVista</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courses.html">Explore Courses</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="enroll.html">Enroll Now</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="centered"> 
+      <h2>Welcome to CodeVista</h2>
+      <div class="growth-steps">
+        <i class="fas fa-brain" style="color:#ffb6c1; font-size: 1.5em;"></i> →
+        <i class="fas fa-lightbulb" style="color:#ffeb3b; opacity: 0.8; font-size: 1.5em;"></i>
+      </div>
+
+      <p style="font-size:20px; font-weight:bold">Explore, Learn, Build, Succeed</p>
+      <p>Step into the world of tech with CodeVista – your platform to learn, practice, and master computer science.</p>
+      <hr>
+
+      <h2>Explore Courses</h2>
+      <div class="Explore Courses">
+        <i class="fas fa-search" style="font-size: 1.5em;"></i>
+        <p>Browse our computer science courses and choose the right path for your career.</p>
+        <button class="home-nav-btn" onclick="location.href='courses.html'">Explore Courses</button>
+      </div>
+
+      <hr>
+      <h2>Start A New Learning Journey</h2>
+      <div class="Enroll now">
+        <i class="fas fa-user-graduate" style="font-size: 1.5em;"></i>
+        <p>Begin your coding journey with us. Enroll now!</p>
+        <button class="home-nav-btn" onclick="location.href='enroll.html'">Enroll Now</button>
+      </div>
+
+      <hr>
+      <h2>Benefits</h2>
+      <div class="benefits">
+        <span><i class="fas fa-laptop-code"></i> Hands-On Learning</span>
+        <span><i class="fas fa-brain"></i> Build Strong Fundamentals</span>
+        <span><i class="fas fa-certificate"></i> Certification</span>
+        <span><i class="fas fa-chart-line"></i> Track Your Progress</span>
+        <span><i class="fas fa-tools"></i> Real-World Projects</span>
+      </div>
+
+      <hr>
+      <footer>&copy; 2025 CodeVista. All rights reserved.</footer>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
