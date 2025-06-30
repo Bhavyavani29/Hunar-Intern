@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="info-icon" onclick="openModal()">🛈</div>
+
+<div class="container">
+  <h1>BMI Calculator</h1>
+  
+  <div class="unit-toggle">
+    <button id="metricBtn" class="active" onclick="switchUnit('metric')">Metric Units</button>
+    <button id="usBtn" onclick="switchUnit('us')">US Units</button>
+  </div>
+  
+  <div class="calculator" id="metricInputs">
+    <label for="heightMetric">Height (cm):<br></label>
+    <input type="number" id="heightMetric" placeholder="Enter height in cm" />
+    <label for="weightMetric">Weight (kg):<br></label>
+    <input type="number" id="weightMetric" placeholder="Enter weight in kg" />
+  </div>
+  
+  <div class="calculator" id="usInputs" style="display: none;">
+    <label for="heightUS">Height (inches):<br></label>
+    <input type="number" id="heightUS" placeholder="Enter height in inches" />
+    <label for="weightUS">Weight (lbs):<br></label>
+    <input type="number" id="weightUS" placeholder="Enter weight in lbs" />
+  </div>
+
+  <button onclick="calculateBMI()">Calculate BMI</button>
+    <button class="clear-btn" onclick="clearInputs()">Clear</button>
+  <div id="result"></div>
+</div>
+
+<div class="container" id="aboutBMIBox" style="display: none;">
+  <h2>About BMI</h2>
+  <p><strong>What is BMI?</strong><br>
+     BMI (Body Mass Index) is a value calculated from your height and weight to estimate body fat and health status.
+  </p>
+  <p><strong>Formulas:</strong></p>
+  <ul>
+    <li><strong>Metric:</strong> BMI = weight (kg) / height (m²)</li>
+    <li><strong>US:</strong> BMI = (weight (lbs) / height (in)²) × 703</li>
+  </ul>
+  <p><strong>BMI Categories:</strong></p>
+  <ul>
+    <li>Under 18.5 → Underweight</li>
+    <li>18.5–24.9 → Normal</li>
+    <li>25.0–29.9 → Overweight</li>
+    <li>30.0 and above → Obese</li>
+  </ul>
+  <p><strong>⚠️ Limitations:</strong></p>
+  <ul>
+    <li>Doesn’t differentiate muscle and fat</li>
+    <li>May not be accurate for all ages/body types</li>
+	<li>Ignores Other Health Factors</li>
+	<li>Not Accurate for All Ages</li>
+  </ul>
+  <button onclick="goBack()">← Back to Calculator</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
