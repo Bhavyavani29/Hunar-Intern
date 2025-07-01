@@ -37,20 +37,6 @@ body {
   font-weight: 500;
 }
 
-#home {
-  background: linear-gradient(to right, #fff5f3, #fdfdf5);
-  background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite;
-  padding: 30px;
-  color: #212121;
-}
-
-@keyframes gradientShift {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
 section {
   padding: 30px;
   background-color: white;
@@ -325,8 +311,8 @@ table th, table td {
     grid-template-columns: 1fr;
   }
 
-  .modal-content, .form-style {
-    width: 95%;
+  .modal-content{
+    width: 90%;
   }
 
   table {
