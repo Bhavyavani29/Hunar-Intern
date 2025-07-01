@@ -5,17 +5,17 @@
     }
     html, body {
       height: 100%;
-      overflow: hidden; 
+     /* overflow: hidden;*/ 
       font-family:sans-serif;
 	  background: linear-gradient(to right, #ffe4e1, #f5f5dc);
       color: white;
     }
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+  }
     .nav-links {
       display: flex;
       gap: 20px;
@@ -62,7 +62,7 @@
 	}
 	p {
 		font-size: 18px;
-		color: #ffffff;
+		color: black;
 		line-height: 1.5;
 	}
 	li {
@@ -81,9 +81,4 @@
 		font-size:25px;
 		color: #d6336c; 
 		padding: 20px;
-	}
-	p
-	{ 
-		color:black;
-		font-size: 18px;
 	}
