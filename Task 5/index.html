@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About Us - Hunar Intern</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const alreadyVisited = sessionStorage.getItem('visitedHunar');
+      if (!alreadyVisited) {
+        sessionStorage.setItem('visitedHunar', 'true');
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          setTimeout(() => loader.style.display = 'none', 800);
+        }, 2500);
+      } else {
+        loader.style.display = 'none';
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <div id="loader">
+    <h1>Hunar Intern – Empowering Internships</h1>
+  </div>
+
+  <section class="main-section">
+    <div class="image-section">
+      <img src="phone.jpeg" alt="Phone Image" />
+    </div>
+    <div class="content-section">
+      <div class="about-container">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Hunar Intern. We bring together new and key learning experiences that build both your confidence and capabilities. Our internships are uniquely tailored for today’s dynamic workforce. <br><br>
+          At Hunar Intern, we believe in providing opportunities to grow, learn, and succeed. Start your journey with us and forge your ambition into reality.
+        </p>
+        <button class="contact-us-btn">Contact Us</button>
+      </div>
+
+      <div class="info-cards">
+        <div class="card" data-message="You can reach us easily.">
+          <h3><i class="fas fa-phone-alt"></i> CALL US</h3>
+          <p>1 (234) 567-891<br>1 (234) 987-654</p>
+          <span class="tooltip">You can reach us easily.</span>
+        </div>
+
+        <div class="card" data-message="Visit us at our headquarters.">
+          <h3><i class="fas fa-map-marker-alt"></i> LOCATION</h3>
+          <p>121 Rock Street, 21 Avenue, New York, NY 92103-9000</p>
+          <span class="tooltip">Visit us at our headquarters.</span>
+        </div>
+
+        <div class="card" data-message="Our working hours are flexible.">
+          <h3><i class="fas fa-clock"></i> HOURS</h3>
+          <p>Mon–Fri: 11 am – 8 pm<br>Sat, Sun: 6 am – 8 pm</p>
+          <span class="tooltip">Our working hours are flexible.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup-form" id="popupForm">
+    <div class="form-box">
+      <span class="close-btn" id="closeForm">&times;</span>
+      <h3>Register Your Issue</h3>
+      <form>
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" required placeholder="Enter your email" />
+
+        <label for="issue">Issue:</label>
+        <textarea id="issue" rows="3" required placeholder="Describe your issue"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
