@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Baloo Bhai 2", cursive;
+  background: url(https://i.postimg.cc/KzPQXFm4/Boxing-girl.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.left img {
+  width: 60px;
+  max-width: 100%;
+  height: auto;
+  filter: invert(100%);
+}
+
+.left div {
+  font-size: 16px;
+  text-align: center;
+}
+
+.mid {
+  flex: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navbar {
+  display: inline-block;
+}
+
+.navbar li {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  text-decoration: underline;
+  color: gray;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  font-family: "Baloo Bhai 2", cursive;
+  color: white;
+  background-color: black;
+  padding: 8px 14px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(73, 73, 73);
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cont {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  padding: 35px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.formgroup input {
+  font-family: "Baloo Bhai 2", cursive;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+}
+
+.cont h1,
+.cont h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cont button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#bmi-result {
+  margin-top: 10px;
+  font-size: 16px;
+  color: lightgray;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border: 2px solid white;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#about-section p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+#contact-section {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#contact-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .cont {
+    padding: 25px;
+    width: 95%;
+  }
+
+  #about-section p,
+  #contact-section {
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar li {
+    font-size: 18px;
+  }
+
+  .formgroup input {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .cont h1, .cont h2 {
+    font-size: 20px;
+  }
+
+  #contact-section h2 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dumble Fitness Club</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="head">
+    <div class="left">
+      <img src="https://i.postimg.cc/QdR1bPct/logo2.png" alt="Dumble Fitness Club" />
+      <div>Fitness Club</div>
+    </div>
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="#" class="active" onclick="showSection('registration')">Home</a></li>
+        <li><a href="#" onclick="showSection('bmi')">Fitness Calculator</a></li>
+        <li><a href="#" onclick="showSection('about')">About Us</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <button class="btn" onclick="openModal('call')">Call Us Now</button>
+      <button class="btn" onclick="openModal('email')">Email Us</button>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="cont">
+      <h1 id="section-title">Fitness Calculator</h1>
+      <div id="registration-section">
+        <form id="joinForm">
+          <div class="formgroup">
+            <input type="text" name="name" id="name" placeholder="Enter Name" required />
+          </div>
+          <div class="formgroup">
+            <input type="number" name="age" id="age" placeholder="Enter Age" required min="0" />
+          </div>
+          <div class="formgroup">
+            <input type="text" name="gender" id="gender" placeholder="Enter Gender" required />
+          </div>
+          <div class="formgroup">
+            <input type="text" name="locality" id="locality" placeholder="Enter Your Locality" required />
+          </div>
+          <button type="submit" class="btn submit">Submit</button>
+        </form>
+      </div>
+	  
+      <div id="bmi-section" style="display: none;">
+        <h2>Calculate your Body Mass Index (BMI):</h2>
+        <div class="formgroup">
+          <input type="number" id="height" placeholder="Enter height in cm" required min="0" />
+        </div>
+        <div class="formgroup">
+          <input type="number" id="weight" placeholder="Enter weight in kg" required min="0" />
+        </div>
+        <button onclick="calculateBMI()">Calculate</button>
+        <div id="bmi-result"></div>
+      </div>
+
+      <div id="about-section" style="display: none;">
+        <p>
+          Welcome to Dumble Fitness Club, your ultimate destination for transforming both body and mind. Our club is built to empower every individual — from beginners taking their first step to fitness enthusiasts pushing their limits. We believe fitness is more than just workouts — it’s a lifestyle.
+        </p><br>
+        <p>
+          Be part of a community that moves together — and transforms together.
+        </p>
+      </div>
+
+      <div id="contact-section" style="display: none;">
+        <h2>If you have any questions, need assistance, or simply want to know more about what we offer, we’d be happy to help.</h2>
+        <p><strong>📧 Email:</strong> fitness_club@gmail.com</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📍 Address:</strong> Sector 5, Vasai West, Maharashtra, India</p><br>
+        <h2>Don’t hesitate to reach out — we’re here to support your fitness journey!</h2>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2023 Dumble Fitness Club. All rights reserved.
+  </footer>
+
+  <div id="callModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('call')">&times;</span>
+      <h3>Contact Us</h3>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+    </div>
+  </div>
+
+  <div id="emailModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('email')">&times;</span>
+      <h3>Email Us</h3>
+      <p><strong>Email:</strong> fitness_club@gmail.com</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(section) {
+      const sections = ['registration', 'bmi', 'about', 'contact'];
+      sections.forEach(id => {
+        document.getElementById(id + '-section').style.display = (section === id) ? 'block' : 'none';
+      });
+
+      const titleMap = {
+        registration: 'Fitness Calculator',
+        bmi: 'BMI Calculator',
+        about: 'About Us',
+        contact: 'Contact Us'
+      };
+      document.getElementById("section-title").innerText = titleMap[section];
+
+      document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
+      document.querySelector(`.navbar a[onclick*="${section}"]`).classList.add('active');
+    }
+
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById("height").value);
+      const weight = parseFloat(document.getElementById("weight").value);
+      const result = document.getElementById("bmi-result");
+
+      if (!height || !weight || height <= 0 || weight <= 0) {
+        result.innerHTML = "Please enter valid height and weight.";
+        return;
+      }
+
+      const bmi = weight / ((height / 100) ** 2);
+      let category = "";
+      if (bmi < 18.5) category = "Underweight";
+      else if (bmi < 25) category = "Normal weight";
+      else if (bmi < 30) category = "Overweight";
+      else category = "Obese";
+
+      result.innerHTML = `Your BMI is ${bmi.toFixed(2)} (${category})`;
+    }
+
+    document.getElementById("joinForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const gender = document.getElementById("gender").value.trim();
+      const locality = document.getElementById("locality").value.trim();
+
+      if (!name || !age || !gender || !locality) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+
+      alert("Thank you for joining! Your form has been submitted.");
+      this.reset();
+    });
+
+    function openModal(type) {
+      document.getElementById(type + "Modal").style.display = "block";
+    }
+
+    function closeModal(type) {
+      document.getElementById(type + "Modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
